@@ -1,0 +1,83 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<div id = "main">
+<form name="f">
+<input type="text" name="demo"><br>
+<input type="button" value = "1" onclick="add()+=1" >
+<input type="button" value = "2" onclick="add()+=2" >
+<input type="button" value = "3" onclick="add()+=3" >
+<input type="button" value = "+" onclick="add()+=4" >
+<br>
+<input type="button" value = "4" onclick="f.demo.value += 4" >
+<input type="button" value = "5" onclick="f.demo.value += 5" >
+<input type="button" value = "6" onclick="f.demo.value += 6" >
+<input type="button" value = "-" onclick="sub()='-'" >
+<br>
+<input type="button" value = "7" onclick="f.demo.value += 7" >
+<input type="button" value = "8" onclick="f.demo.value += 8" >
+<input type="button" value = "9" onclick="f.demo.value += 9" >
+<input type="button" value = "/" onclick="div()= '/'" >
+<br>
+<input type="button" value = "C" onclick="f.demo.value += ''" >
+<input type="button" value = "0" onclick="f.demo.value += 0" >
+<input type="button" value = "=" onclick="f.demo.value += eval(f.demo.value)" >
+<input type="button" value = "*" onclick="mul()='*'" >
+<br>
+</form>
+</div>
+<script>
+function add(){
+var a = 0, b = 0;
+a = f.demo.value;
+b = a.charAt(a.length-1);
+if(b=="+" || b=="-" || b=="/"|| b=="*")
+{
+f.demo.value = a.substring(0, a.length-1);
+f.demo.value+="+";
+}
+else{
+f.demo.value+="+";
+}
+function sub(){
+var a = 0, b = 0;
+a = f.demo.value;
+b = a.charAt(a.length-1);
+if(b=="+" || b=="-" || b=="/"|| b=="*")
+{
+f.demo.value = a.substring(0, a.length-1);
+f.demo.value+="-";
+}
+else{
+f.demo.value+="-";
+}
+function div(){
+var a = 0, b = 0;
+a = f.demo.value;
+b = a.charAt(a.length-1);
+if(b=="+" || b=="-" || b=="/"|| b=="*")
+{
+f.demo.value = a.substring(0, a.length-1);
+f.demo.value+="/";
+}
+else{
+f.demo.value+="/";
+}
+function mul(){
+var a = 0, b = 0;
+a = f.demo.value;
+b = a.charAt(a.length-1);
+if(b=="+" || b=="-" || b=="/"|| b=="*")
+{
+f.demo.value = a.substring(0, a.length-1);
+f.demo.value+="*";
+}
+else{
+f.demo.value+="*";
+}
+</script>
+</body>
+</html>
